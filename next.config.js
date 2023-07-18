@@ -1,17 +1,21 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 module.exports = {
-  async rewrites() {
-    const schools = [
-      // List all your school names here
-      "mario-sperry-miami",
-      "alliance-alphaville",
-      "alliance-campo-belo",
-      // ...
-    ];
-
-    return schools.map((school) => ({
-      source: `/${school}`,
-      destination: `/template/${school}`,
-    }));
+  experimental: {
+    serverActions: true,
   },
+  images: {
+    domains: [
+      "public.blob.vercel-storage.com",
+      "res.cloudinary.com",
+      "abs.twimg.com",
+      "pbs.twimg.com",
+      "avatars.githubusercontent.com",
+      "www.google.com",
+      "flag.vercel.app",
+      "illustrations.popsy.co",
+    ],
+  },
+  reactStrictMode: false,
 };
