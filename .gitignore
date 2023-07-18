@@ -2,6 +2,7 @@
 **.next
 **.DS_Store
 **.vercel
+**.env
 .vscode
 **.git
 .vercel
